@@ -1,0 +1,20 @@
+/* ------------------------------------------------------------ *\
+  Index
+\* ------------------------------------------------------------ */
+
+@import 'generic/index';
+@import 'components/index';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Pokedex {
+  background: $white-200;
+  height: 100vh;
+  padding: 22px 16px;
+}

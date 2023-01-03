@@ -1,0 +1,150 @@
+.c-loop {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 8px;
+  justify-content: space-between;
+  list-style: none;
+  padding-top: 15px;
+
+  &__item {
+    max-width: 104px;
+    width: 100%;
+
+    a {
+      text-decoration: none;
+    }
+    
+    button {
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      width: 100%;
+    }
+  }
+
+  .c-card {
+    border: 1.5px solid;
+    border-radius: 10px;
+
+    &--green {
+      color: $green-100;
+      border-color: inherit;
+    }
+
+    &--red {
+      border-color: inherit;
+      color: $red-100;
+    }
+
+    &--blue {
+      border-color: inherit;
+      color: $blue-200;
+    }
+
+    &--white {
+      border-color: inherit;
+      color: $purple-100;
+    }
+
+    &--yellow {
+      border-color: inherit;
+      color: $yellow-100;
+    }
+
+    &--brown {
+      border-color: inherit;
+      color: $brown-100;
+    }
+
+    &--purple {
+      border-color: inherit;
+      color: $purple-300;
+    }
+
+    &--gray {
+      border-color: inherit;
+      color: $gray-100;
+    }
+
+    &--pink {
+      border-color: inherit;
+      color: $pink-200;
+    }
+
+    &--black {
+      border-color: inherit;
+      color: $gray-300;
+    }
+    
+    &__id {
+      font-size: map-get($font-size, xs);
+      font-weight: 400;
+      display: block;
+      padding-right: 6px;
+      padding-top: 2px;
+      text-align: end;
+    }
+
+    &__picture {
+      height: 72px;
+      margin: 0 auto;
+      max-width: 72px;
+  
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+  
+    &__name {
+      border-radius: 0 0 8px 8px;
+      color: $white-100;
+      font-size: map-get($font-size, sm);
+      font-weight: 400;
+      line-height: 16px;
+      padding: 3px 0 3px;
+      text-align: center;
+      text-transform: capitalize;
+
+      &.green {
+        background: $green-100;
+      }
+
+      &.red {
+        background: $red-100;
+      }
+
+      &.blue {
+        background: $blue-200;
+      }
+
+      &.white {
+        background: $purple-100;
+      }
+
+      &.yellow {
+        background: $yellow-100;
+      }
+
+      &.brown {
+        background: $brown-100;
+      }
+
+      &.purple {
+        background: $purple-300;
+      }
+
+      &.gray {
+        background: $gray-100;
+      }
+
+      &.pink {
+        background: $pink-200;
+      }
+
+      &.black {
+        background: $gray-300;
+      }
+    }
+  }
+}

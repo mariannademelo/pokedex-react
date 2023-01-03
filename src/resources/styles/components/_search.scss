@@ -1,0 +1,49 @@
+.c-search {
+  margin-top: 4px;
+  position: relative;
+  width: 100%;
+
+  &--focused & {
+    &__clear {
+      display: block;
+    }
+
+    &__svg {
+      left: 8px;
+    }
+  }
+
+  &__input {
+    border: 1.5px solid $gray-100;
+    border-radius: 8px;
+    font-size: map-get($font-size, sm);
+    outline: none;
+    padding: 4px 24px;
+    width: 100%;
+
+    &::placeholder {
+      color: $gray-200;
+      text-align: center;
+    }
+  }
+
+  &__svg {
+    left: 39%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__clear {
+    background: none;
+    border: 0;
+    color: $gray-200;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

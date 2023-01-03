@@ -1,0 +1,50 @@
+.c-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__svg {
+    height: auto;
+    max-width: 24px;
+  }
+
+  &__title {
+    font-size: map-get($font-size, xlg);
+    font-weight: map-get($font-weight, bold);
+    margin-left: 16px;
+  }
+
+  &__content {
+    color: inherit;
+    display: flex;
+    padding: 0 8px;
+    text-decoration: none;
+  }
+
+  .c-sort {
+    &__btn {
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      display: flex;
+      padding-right: 7px;
+      padding-top: 10px;
+    }
+      
+    button[data-type="name"] {
+      .c-sort__type {
+        font-size: map-get($font-size, xs);
+        font-weight: map-get($font-weight, semiBold);
+        line-height: 1;
+      }
+    }
+
+    &__type {
+      font-size: map-get($font-size, sm);
+      padding-right: 3px;
+      text-transform: capitalize;
+      white-space: pre-line
+    }
+  }
+}
+

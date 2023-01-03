@@ -1,0 +1,332 @@
+.c-pokemon {
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  z-index: 7;
+
+  &--hidden {
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &__content {
+    background: url( '../../images/pokeball.svg' ) no-repeat 95% 8px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &--green {
+      background-color: $green-100;
+      color: $green-100;
+
+      .c-type__item {
+        background: $green-100;
+      }
+    }
+  
+    &--red {
+      background-color: $red-100;
+      color: $red-100;
+
+      .c-type__item {
+        background: $red-100;
+      }
+    }
+  
+    &--blue {
+      background-color: $blue-200;
+      color: $blue-200;
+
+      .c-type__item {
+        background: $blue-200;
+      }
+    }
+  
+    &--white {
+      background-color: $purple-100;
+      color: $purple-100;
+
+      .c-type__item {
+        background: $purple-100;
+      }
+    }
+  
+    &--yellow {
+      background-color: $yellow-100;
+      color: $yellow-100;
+
+      .c-type__item {
+        background: $yellow-100;
+      }
+    }
+  
+    &--brown {
+      background-color: $brown-100;
+      color: $brown-100;
+
+      .c-type__item {
+        background: $brown-100;
+      }
+    }
+  
+    &--purple {
+      background-color: $purple-300;
+      color: $purple-300;
+
+      .c-type__item {
+        background: $purple-300;
+      }
+    }
+  
+    &--gray {
+      background-color: $gray-100;
+      color: $gray-100;
+
+      .c-type__item {
+        background: $gray-100;
+      }
+    }
+  
+    &--pink {
+      background-color: $pink-200;
+      color: $pink-200;
+
+      .c-type__item {
+        background: $pink-200;
+      }
+    }
+  
+    &--black {
+      background-color: $gray-300;
+      color: $gray-300;
+
+      .c-type__item {
+        background: $gray-300;
+      }
+    }
+  }
+
+  &__header {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    font-weight: map_get($font-weight, bold);
+    padding: 22px 27px;
+    padding-right: 26px;
+  }
+
+  &__back {
+    background: 0;
+    border: 0;
+    cursor: pointer;
+    display: inherit;
+  }
+
+  &__name {
+    font-size: map_get($font-size, xlg);
+    margin: 0 19px;
+    text-transform: capitalize;
+  }
+
+  &__id {
+    font-size: map_get($font-size, md);
+    margin: 0 0 0 auto;
+  }
+
+  &__body {
+    background: $white-100;
+    border-radius: 8px;
+    margin: auto 4px 4px;
+    padding-top: 42px;
+    position: relative;
+  }
+
+  &__picture {
+    left: 50%;
+    position: absolute;
+    top: -143px;
+    transform: translate(-50%);
+
+    img {
+      height: auto;
+      width: 200px;
+    }
+  }
+
+  &__description {
+    font-size: map_get($font-size, sm);
+    color: $gray-300;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 310px;
+  }
+
+  .c-type {
+    align-items: center;
+    color: $white-100;
+    display: flex;
+    font-size: map_get($font-size, sm);
+    font-weight: map_get($font-weight, bold);
+    justify-content: center;
+
+    &__item {
+      // background: green;
+      border-radius: 10px;
+      margin: 14px 8px;
+      padding: 2px 8px;
+      text-transform: capitalize;
+    }
+  }
+
+  .c-about {
+    text-align: center;
+
+    &__title {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    &__items {
+      align-items: flex-end;
+      color: $gray-300;
+      display: flex;
+      font-size: map_get($font-size, sm);
+      height: 48px;
+      justify-content: center;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    &__inner {
+      display: flex;
+    }
+
+    &__item {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: auto 0 0;
+      width: 100px;
+
+      .c-abilities {
+        flex-direction: column;
+        text-align: start;
+        text-transform: capitalize;
+
+        & + p {
+          margin-top: 5px;
+        }
+      }
+
+      p {
+        color: $gray-200;
+        font-size: map_get($font-size, xs);
+        margin-top: 11px;
+        width: 106px;
+      }
+
+      svg {
+        margin-right: 9px;
+      }
+
+      // span:first-child {
+      //   text-transform: capitalize;
+      // }
+
+      // span + span {
+      //   text-transform: capitalize;
+      //   width: 100%;
+      // }
+    }
+  }
+
+  .c-stats {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: map_get($font-weight, bold);
+    padding: 47.5px 12px;
+    padding-top: 14px;
+
+    &__title {
+      font-size: map_get($font-size, lg);
+      padding-bottom: 14px;
+      text-align: center;
+      width: 100%;
+    }
+
+    &__info {
+      border-right: 1px solid $gray-100;
+      max-width: 49px;
+      padding-right: 13px;
+      width: 100%;
+
+      li {
+        font-size: map_get($font-size, sm);
+        line-height: 1.6;
+        text-align: end;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .c-details {
+    font-size: map_get($font-size, sm);
+    font-weight: map_get($font-weight, regular);
+    line-height: 1.6;
+    max-width: 271px;
+    padding-left: 12px;
+    width: 100%;
+
+    &__value {
+      color: $gray-300;
+    }
+
+    &__item {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__bar {
+      height: 4px;
+      max-width: 231px;
+      width: 100%;
+    }
+
+    .c-bar {
+      position: relative;
+
+      span {
+        background: currentColor;
+        display: block;
+        height: 100%;
+      }
+
+      &__bg {
+        border-radius: 4px;
+        opacity: 0.2;
+        width: 100%;
+      }
+
+      &__value {
+        border-radius: 4px 0 0 4px;
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
